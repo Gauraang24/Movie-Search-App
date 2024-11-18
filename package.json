@@ -1,9 +1,12 @@
 {
   "name": "moviesearchapp",
+  "homepage": "https://Gauraang24.github.io/Movie-Search-App/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
@@ -11,6 +14,7 @@
   },
   "dependencies": {
     "antd": "^5.22.1",
+    "gh-pages": "^6.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.28.0"
