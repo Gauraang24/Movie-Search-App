@@ -1,14 +1,22 @@
 import { useState } from 'react'
 import './App.css'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Layout from './Components/Layout.jsx';
+import Home from './Pages/Home';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div className="flex items-center justify-center min-h-screen bg-gray-100">
-        <h1 className="text-4xl font-bold text-blue-600">Hello, Vite + React + Tailwind!</h1>
-      </div>
+      <Router>
+        <Routes>
+          <Route element={<Layout />}>
+
+            <Route path="/" element={<Home />} />
+            {/* <Route path="/starred" element={<StarredMovies />} /> */}
+          </Route>
+        </Routes>
+      </Router>
     </>
   )
 }
